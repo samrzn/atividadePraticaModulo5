@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Tour | Voos, Hospedagens, Pacotes & mais</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <link rel="icon" href="./imagens/trip-tour_dark-logo.png">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#053894 ;">
+            <div class="container">
+                <div class="logo-navbar"><a class="navbar-brand mb-0 h1" href="./index.html" id="brandTitle">
+                        <img src="./imagens/trip-tour_white-shadow2.png" alt="Logo agência" style="width: 5vw;">Trip Tour</a>
+                </div>
+                <div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./destinos.html">Destinos</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./promo.html">Promoções</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./contato.html">Contato</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <button class="btn btn-sm btn-outline-light d-md btn-block" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5l-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z" />
+                            </svg>Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel-index">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagens/florian-wehde-milUxSbp4_A-unsplash.jpg" class="d-block w-100" alt="Arco do Triunfo, Paris (França)">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/ze-paulo-gasparotto-h-UU2PnN5a0-unsplash.jpg" class="d-block w-100" alt="Fernando de Noronha, Pernambuco (Brasil)">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/zequn-gui-xVFS3meofYM-unsplash.jpg" class="d-block w-100" alt="Cidade de Seoul (Coreia do Sul)">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/gabriel-ramos-LgMo1E7EvKc-unsplash.jpg" class="d-block w-100" alt="Avenida Paulista, São Paulo (Brasil)">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/adrien-olichon-QRtym77B6xk-unsplash.jpg" class="d-block w-100" alt="Amsterdan (Holanda)">
+                    </div>
+                </div>
+            </div>
+            <form class="carousel-caption d-none d-lg-block">
+                <div class="form-row shadow-lg mb-5 rounded" id="searchBar">
+                    <div class="col-1"></div>
+                    <div class="col-1" id="iconBar">
+                        <img src="./imagens/transport_travel_flight_airplane_ticket_plane_icon_225382.png" alt="icon">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Pesquisar viagens">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-md btn-outline-light d-sm btn-block" type="button" style="background-color: #053894;">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                                <path fill="currentColor" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0z" />
+                            </svg>Buscar</button>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </form>
+        </div>
+        <div class="container shadow mb- rounded" id="main-content">
+            <div class="card shadow mb-5 rounded" style="width: 15rem;">
+                <a href="./index.html" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">Pacote - Disney, Orlando</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2023</h6>
+                        <span id="priceTag">R$ 6.029,99</span>
+                        <span id="detailTag">8 diárias</span>
+                    </div>
+                    <img src="./imagens/pexels-craig-adderley-3411135.jpg" class="card-img-top" alt="Disney, Orlando (USA)">
+                </a>
+            </div>
+            <div class="card shadow mb-5 rounded" style="width: 15rem;">
+                <a href="./index.html" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">Pacote - Bonito, Mato Grosso do Sul</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2023</h6>
+                        <span id="priceTag">&nbsp;&nbsp;R$ 429,99</span>
+                        <span id="detailTag">3 diárias</span>
+                    </div>
+                    <img src="./imagens/Estrela-do-Formoso-Bonito.png" class="card-img-top" alt="Bonito, Mato Grosso do Sul (Brasil)">
+                </a>
+            </div>
+            <div class="card shadow mb-5 rounded" style="width: 15rem;">
+                <a href="./index.html" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">All Inclusive - Rio de Janeiro</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2022</h6>
+                        <span id="priceTag">&nbsp;R$ 1.289,99</span>
+                        <span id="detailTag">5 diárias</span>
+                    </div>
+                    <img src="./imagens/rio-de-janeiro-rj.jpg" class="card-img-top" alt="Cidade do Rio de Janeiro, RJ (Brasil)">
+                </a>
+            </div>
+            <div class="card shadow mb-5 rounded" style="width: 15rem;">
+                <a href="./index.html" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">Pacote - Foz do Iguaçu, Paraná</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2023</h6>
+                        <span id="priceTag">&nbsp;&nbsp;&nbsp;R$ 789,99</span>
+                        <span id="detailTag">3 diárias</span>
+                    </div>
+                    <img src="./imagens/foz-do-iguaçu-2.jpg" class="card-img-top" alt="Foz do Iguaçu, Paraná (Brasil)">
+                </a>
+            </div>
+            <div class="card shadow mb-5 rounded" style="width: 15rem;">
+                <a href="./index.html" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">Pacote - Paris, França</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2024</h6>
+                        <span id="priceTag">R$ 2.549,99</span>
+                        <span id="detailTag">4 diárias</span>
+                    </div>
+                    <img src="./imagens/anthony-delanoix-QAwciFlS1g4-unsplash.jpg" class="card-img-top" alt="Torre Eiffel, Paris (França)">
+                </a>
+            </div>
+            <div class="card shadow mb-5 rounded" style="width: 15rem;">
+                <a href="./index.html" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">All Inclusive - Porto Seguro</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2023</h6>
+                        <span id="priceTag">&nbsp;&nbsp;R$ 949,99</span>
+                        <span id="detailTag">5 diárias</span>
+                    </div>
+                    <img src="./imagens/001-porto-seguro-praia-resort_20200520123236.jpg" class="card-img-top" alt="Porto Seguro, Bahia (Brasil)">
+                </a>
+            </div>
+            <div class="card shadow mb-5 rounded" style="width: 15rem;">
+                <a href="./index.html" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">Pacote - Caldas Novas, Góias</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2022</h6>
+                        <span id="priceTag">&nbsp;R$ 1.049,99</span>
+                        <span id="detailTag">6 diárias</span>
+                    </div>
+                    <img src="./imagens/caldas-novas.jpg" class="card-img-top" alt="Caldas Novas, Góias (Brasil)">
+                </a>
+            </div>
+            <div class="card shadow mb-5 rounded" style="width: 15rem;">
+                <a href="./index.html" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">Pacote - Cartagena, Colômbia</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2023</h6>
+                        <span id="priceTag">R$ 3.999,99</span>
+                        <span id="detailTag">7 diárias</span>
+                    </div>
+                    <img src="./imagens/cartagena-colombia.jpg" class="card-img-top" alt="Cartagena, Bolívar (Colômbia)">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-fluid shadow mb- rounded" id="footerBody">
+            <div class="container">
+                <section class="footerMain d-none d-lg-block">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <ul>
+                                </li><span class="footerItem">Quem somos</span></li>
+                                </li><span class="footerItem">Pacotes</span></li>
+                                </li><span class="footerItem">Destinos</span></li>
+                                </li><span class="footerItem">Promoções</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5">
+                            <ul>
+                                </li><span class="footerItem">Central de ajuda</span></li>
+                                </li><span class="footerItem">Política de privacidade</span></li>
+                                </li><span class="footerItem">Trabalhe conosco</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="iconSuport">
+                                <h6>Formas de pagamento</h6>
+                                <span class="footerIcon"><img src="https://thumbcdn-z.hotelurbano.net/nUUwCc2LMypp48fuf1UO4DeCX-c=/https%3A%2F%2Fs3.amazonaws.com%2Fghucdn%2Fstatic%2Fcms-uploads%2Fuploads%2F2021%2F04%2Fvisa-1.png" alt=""></span>
+                                <span class="footerIcon"><img src="https://thumbcdn-z.hotelurbano.net/X4pxyMyskip4OoCXmieFFQYAmWc=/https%3A%2F%2Fs3.amazonaws.com%2Fghucdn%2Fstatic%2Fcms-uploads%2Fuploads%2F2021%2F04%2FMastercard_logo_outline.png" alt=""></span>
+                                <span class="footerIcon"><img src="https://thumbcdn-z.hotelurbano.net/nvzGjNXPLi8zyb_urQ63nUWSz8Y=/https%3A%2F%2Fs3.amazonaws.com%2Fghucdn%2Fstatic%2Fcms-uploads%2Fuploads%2F2021%2F04%2FAmex_icon.png" alt=""></span>
+                                <span class="footerIcon"><img src="https://thumbcdn-z.hotelurbano.net/Hz9AqjkMg2CoeB7E07t-zx2GPGo=/https%3A%2F%2Fs3.amazonaws.com%2Fghucdn%2Fstatic%2Fcms-uploads%2Fuploads%2F2021%2F04%2FBoleto.png" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="container-fluid" id="footerBase">
+            <span class="baseItem">&copy; Recode Pro 2022</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
