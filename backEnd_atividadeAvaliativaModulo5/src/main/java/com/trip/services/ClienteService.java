@@ -1,5 +1,6 @@
 package com.trip.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.trip.model.entity.Cliente;
@@ -12,6 +13,8 @@ public interface ClienteService {
 
 	void validarEmail(String email);
 
+	List<Cliente> buscar(Cliente clienteSearch);
+	
 	Optional<Cliente> buscarPorId(Integer id_cliente);
 
 }

@@ -14,5 +14,7 @@ public interface CompraService {
 	Optional<Compra> buscarPorId(Integer id_compra);
 
 	void validarPacote(Integer id_pacote);
+	
+	Optional<Compra> buscarPorIdCliente(Integer fk_id_cliente);
 
 }

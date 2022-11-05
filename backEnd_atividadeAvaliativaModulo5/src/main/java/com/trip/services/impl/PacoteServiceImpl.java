@@ -33,4 +33,8 @@ public class PacoteServiceImpl implements PacoteService {
 		return repository.findById(id_pacote);
 	}
 
+	@Override
+	public List<Pacote> findAll() {
+		return repository.findAll();
+	}
 }

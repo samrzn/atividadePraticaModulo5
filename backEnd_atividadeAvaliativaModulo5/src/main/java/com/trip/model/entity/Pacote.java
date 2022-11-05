@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,29 +13,29 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "pacote")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Cliente {
+public class Pacote {
 
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id_cliente;
+	private Integer id_pacote;
 
 	@Column
-	private String nome;
+	private String destino;
 
 	@Column
-	private String telefone;
+	private Double valor;
 
 	@Column
-	private String email;
+	private String data_viagem;
 
-	@Column
-	private String cpf;
+	public void setPacote(Pacote pacote) {
 
-	@Column
-	private String senha;
+	}
+
 }

@@ -5,9 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -16,30 +13,34 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "compra")
+@Table(name = "cliente")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Compra {
+public class Cliente {
 
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id_compra;
+	private Integer id_cliente;
 
 	@Column
-	private String destino;
+	private String nome;
 
 	@Column
-	private Double valor;
+	private String telefone;
 
-	@JoinColumn(name = "id_cliente")
-	@ManyToOne
-	private Cliente cliente;
+	@Column
+	private String email;
 
-	@JoinColumn(name = "id_pacote")
-	@OneToMany
-	private Pacote pacote;
+	@Column
+	private String cpf;
 
+	@Column
+	private String senha;
+
+	public void setCliente(Cliente cliente) {
+
+	}
 }

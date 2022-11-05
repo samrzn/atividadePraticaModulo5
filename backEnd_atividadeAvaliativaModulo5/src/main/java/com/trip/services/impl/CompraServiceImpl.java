@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.trip.exception.RegraException;
@@ -13,6 +14,7 @@ import com.trip.repositories.CompraRepo;
 import com.trip.repositories.PacoteRepo;
 import com.trip.services.CompraService;
 
+@Repository
 public class CompraServiceImpl implements CompraService {
 
 	@Autowired
@@ -46,6 +48,11 @@ public class CompraServiceImpl implements CompraService {
 		if (exists) {
 			throw new RegraException("Opa, ID inexistente! Pacote não encontrado.");
 		}
+	}
+
+	@Override
+	public Optional<Compra> buscarPorIdCliente(Integer fk_id_cliente) {
+		return repository.findById(fk_id_cliente);
 	}
 
 }
