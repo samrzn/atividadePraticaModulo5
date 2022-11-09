@@ -34,11 +34,11 @@ public class Compra {
 	@Column
 	private Double valor;
 
-	@JoinColumn(name = "id_cliente")
+	@JoinColumn(name = "fk_id_cliente")
 	@ManyToOne
 	private Cliente cliente;
 
-	@JoinColumn(name = "id_pacote")
+	@JoinColumn(name = "fk_id_pacote")
 	@ManyToOne
 	private Pacote pacote;
 

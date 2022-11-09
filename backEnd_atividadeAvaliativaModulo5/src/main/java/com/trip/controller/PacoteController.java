@@ -21,24 +21,6 @@ public class PacoteController {
 	@Autowired
 	private PacoteService service;
 
-	@GetMapping
-	public ResponseEntity buscar(@RequestParam(value = "destino", required = false) String destino,
-			@RequestParam("pacote") Integer id_pacote) {
-		Pacote pacoteSearch = new Pacote();
-		pacoteSearch.setDestino(destino);
-//		pacoteSearch.setId_pacote(id_pacote);
-
-		Optional<Pacote> pacote = service.buscarPorId(id_pacote);
-		if (!pacote.isPresent()) {
-			return ResponseEntity.badRequest().body("Pacote não encontrado.");
-		} else {
-			pacoteSearch.setPacote(pacote.get());
-		}
-
-		List<Pacote> pkg = service.buscar(pacoteSearch);
-		return ResponseEntity.ok(pkg);
-	}
-
 	@GetMapping("{id}")
 	public ResponseEntity<Optional<Pacote>> findById(@PathVariable("id") Integer id_pacote) {
 		Optional<Pacote> pacote = service.buscarPorId(id_pacote);

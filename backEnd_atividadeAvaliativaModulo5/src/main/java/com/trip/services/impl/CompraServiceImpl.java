@@ -1,9 +1,13 @@
 package com.trip.services.impl;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,8 +29,7 @@ public class CompraServiceImpl implements CompraService {
 
 	@Override
 	@Transactional
-	public Compra salvar(Compra compra, Pacote pacote) {
-		validarPacote(pacote.getId_pacote());
+	public Compra salvar(Compra compra) {
 		return repository.save(compra);
 	}
 
@@ -42,17 +45,25 @@ public class CompraServiceImpl implements CompraService {
 		return repository.findById(id_compra);
 	}
 
-	@Override
-	public void validarPacote(Integer id_pacote) {
-		boolean exists = repoPacote.existsById(id_pacote);
-		if (exists) {
-			throw new RegraException("Opa, ID inexistente! Pacote não encontrado.");
-		}
-	}
+//	@Override
+//	public void validarPacote(Integer id_pacote) {
+//		boolean exists = repoPacote.existsById(id_pacote);
+//		if (exists) {
+//			throw new RegraException("Opa, ID inexistente! Pacote não encontrado.");
+//		}
+//	}
 
 	@Override
 	public Optional<Compra> buscarPorIdCliente(Integer fk_id_cliente) {
 		return repository.findById(fk_id_cliente);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Compra> buscar(Compra searchCompra) {
+		Example<Compra> exemplo = Example.of(searchCompra,
+				ExampleMatcher.matching().withIgnoreCase().withStringMatcher(StringMatcher.CONTAINING));
+		return repository.findAll(exemplo);
 	}
 
 }

@@ -3,6 +3,7 @@ package com.trip.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,7 @@ import com.trip.services.ClienteService;
 @RequestMapping("trip/clientes")
 public class ClienteController {
 
+	@Autowired
 	private ClienteService service;
 
 	@PostMapping("/autenticar")
@@ -48,10 +50,10 @@ public class ClienteController {
 
 	@GetMapping
 	public ResponseEntity buscar(@RequestParam(value = "nome", required = false) String nome,
-			@RequestParam("cliente") Integer id_cliente) {
+			@RequestParam("id_cliente") Integer id_cliente) {
 		Cliente clienteSearch = new Cliente();
 		clienteSearch.setNome(nome);
-//		clienteSearch.setId_cliente(id_cliente);
+		clienteSearch.setId_cliente(id_cliente);
 
 		Optional<Cliente> usuario = service.buscarPorId(id_cliente);
 		if (!usuario.isPresent()) {

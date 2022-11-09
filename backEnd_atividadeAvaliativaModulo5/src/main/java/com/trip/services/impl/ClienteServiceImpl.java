@@ -34,7 +34,6 @@ public class ClienteServiceImpl implements ClienteService {
 		}
 
 		return cliente.get();
-
 	}
 
 	@Override

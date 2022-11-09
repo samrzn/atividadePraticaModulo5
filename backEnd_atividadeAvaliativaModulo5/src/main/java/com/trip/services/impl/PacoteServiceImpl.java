@@ -21,14 +21,6 @@ public class PacoteServiceImpl implements PacoteService {
 	private PacoteRepo repository;
 
 	@Override
-	@Transactional(readOnly = true)
-	public List<Pacote> buscar(Pacote pacoteSearch) {
-		Example<Pacote> exemplo = Example.of(pacoteSearch,
-				ExampleMatcher.matching().withIgnoreCase().withStringMatcher(StringMatcher.CONTAINING));
-		return repository.findAll(exemplo);
-	}
-
-	@Override
 	public Optional<Pacote> buscarPorId(Integer id_pacote) {
 		return repository.findById(id_pacote);
 	}
