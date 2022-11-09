@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.trip</groupId>
-	<artifactId>backEnd_atividadeAvaliativaModulo4</artifactId>
+	<artifactId>backEnd_atividadeAvaliativaModulo5</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>backEnd_atividadeAvaliativaModulo4</name>
-	<description>Atividade Prática Módulo 4 | Recode PRO 2022</description>
+	<name>backEnd_atividadeAvaliativaModulo5</name>
+	<description>Atividade Prática Módulo 5 | Recode PRO 2022</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -20,6 +20,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
