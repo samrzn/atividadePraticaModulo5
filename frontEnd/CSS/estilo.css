@@ -28,6 +28,18 @@ li {
     align-content: center;
 }
 
+.navbarLogin {
+    display: flex;
+    min-height: 5vh;
+    width: 100%;
+    justify-content: center;
+    background-color: black;
+}
+
+.logo {
+    margin-top: 3.5vh;
+}
+
 .article-index {
     height: 60vh;
     background-color: #f1c708;
@@ -39,7 +51,7 @@ li {
 }
 
 .article-indexInfo {
-    height: 56.5vh;
+    height: 61.29vh;
     background-color: black;
 }
 
@@ -80,7 +92,16 @@ li {
     text-align: center;
     font-size: 4.5rem;
     color: #053894;
-    text-shadow: 0.4px 0.8px rgba(73, 73, 73, 0.823);
+    text-shadow: 0.4px 0.4px rgba(29, 29, 29, 0.89);
+    margin-bottom: 3.5vh;
+}
+
+.articleLogin h1 {
+    text-align: center;
+    font-size: 4.5rem;
+    color: #f1c708;
+    text-shadow: 0.4px 0.4px rgba(255, 255, 255, 0.89);
+    margin-bottom: 4vh;
 }
 
 #searchBar {
@@ -125,6 +146,18 @@ li {
     padding-top: 1.4vh;
 }
 
+#main-contentLogin {
+    z-index: 1;
+    border-radius: 10px;
+    background-color: #fff;
+    min-height: 40vh;
+    width: 45vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    padding-top: 1.4vh;
+}
+
 #main-contentPromo {
     position: relative;
     bottom: 30vh;
@@ -161,8 +194,16 @@ li {
 
 .cadastroBody {
     background-color: white;
-    margin-top: 9.9vh;
-    margin-bottom: 16vh;
+    margin-top: 10.5vh;
+    margin-bottom: 12.6vh;
+    position: relative;
+    width: 100%;
+}
+
+.loginBody {
+    background-color: black;
+    margin-top: 4vh;
+    margin-bottom: 13.3vh;
     position: relative;
     width: 100%;
 }
@@ -318,10 +359,22 @@ li {
     text-align: center;
 }
 
+#footerBaseLogin {
+    background-color: #fff;
+    text-align: center;
+}
+
 .baseItem {
     color: white;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.baseItemLogin {
+    color: #f1c708;
+    font-size: 1.07rem;
+    font-weight: 600;
+    text-shadow: 0.1px 0.1px rgba(0, 0, 0, 0.89);
 }
 
 @media (max-width: 480px) {
@@ -378,7 +431,7 @@ li {
     z-index: 0;
     border-radius: 10px;
     margin-top: 2vh;
-    margin-left: 2.35vw;
+    margin-left: 1.49vw;
     margin-bottom: 2vh;
     font-weight: 500;
 }
@@ -388,7 +441,7 @@ li {
     background: linear-gradient(45deg, #f5db68, #f1c708, #fffb00, #fce16c, #f1c708, #ffd000, #ffe76d, #f1c708, #faf603);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -426,7 +479,88 @@ li {
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glow-buttonLogin {
+    width: 30vw;
+    height: 5vh;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: 1vh;
+    margin-left: 7.5vw;
+    margin-bottom: 1vh;
+    font-weight: 500;
+}
+
+.glow-buttonLogin:before {
+    content: '';
+    background: linear-gradient(45deg, #ffd209, #f1c708, #fffb00, #f1c500, #f1c708, #ffd000, #f1c708, #f7ca02, #fffb00);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-buttonLogin:active {
+    color: black;
+    font-weight: 700;
+}
+
+.glow-buttonLogin:active:after {
+    background: transparent;
+}
+
+.glow-buttonLogin:hover:before {
+    opacity: 1;
+}
+
+.glow-buttonLogin:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
