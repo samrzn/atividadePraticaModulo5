@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 		integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-	<link rel="stylesheet" href="./CSS/estilo.css">
+	<link rel="stylesheet" th:href="@{/CSS/estilo.css}">
 	<link rel="icon" href="./imagens/trip-tour_dark-logo.png">
 </head>
 
@@ -18,7 +18,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#053894 ;">
             <div class="container">
                 <div class="logo-navbar"><a class="navbar-brand mb-0 h1" href="./index.html" id="brandTitle">
-                        <img src="./imagens/trip-tour_white-shadow2.png" alt="Logo agência" style="width: 5vw;">Trip
+                        <img th:src="@{/imagens/trip-tour_white-shadow2.png}" alt="Logo agência" style="width: 5vw;">Trip
                         Tour</a>
                 </div>
                 <div>
@@ -30,17 +30,17 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="./destinos.html">Destinos</a>
+                            <a class="nav-link" th:href="@{/destinos.html}">Destinos</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="./promo.html">Promoções</a>
+                            <a class="nav-link" th:href="@{/promo.html}">Promoções</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="./contato.html">Contato</a>
+                            <a class="nav-link" th:href="@{/contato.html}">Contato</a>
                         </li>
                     </ul>
                     <form class="form-inline">
-                        <a class="nav-link" href="./login.html"><button
+                        <a class="nav-link" th:href="@{/login.html}"><button
                                 class="btn btn-sm btn-outline-light d-md btn-block" type="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
                                     height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
