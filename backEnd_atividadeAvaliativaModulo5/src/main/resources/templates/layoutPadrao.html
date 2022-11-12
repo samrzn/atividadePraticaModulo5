@@ -11,13 +11,13 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 		integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 	<link rel="stylesheet" th:href="@{/CSS/estilo.css}">
-	<link rel="icon" href="./imagens/trip-tour_dark-logo.png">
+	<link rel="icon" th:href="@{/imagens/trip-tour_dark-logo.png}">
 </head>
 
 <div th:fragment="navbar">
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#053894 ;">
             <div class="container">
-                <div class="logo-navbar"><a class="navbar-brand mb-0 h1" href="./index.html" id="brandTitle">
+                <div class="logo-navbar"><a class="navbar-brand mb-0 h1" th:href="@{/index.html}" id="brandTitle">
                         <img th:src="@{/imagens/trip-tour_white-shadow2.png}" alt="Logo agência" style="width: 5vw;">Trip
                         Tour</a>
                 </div>

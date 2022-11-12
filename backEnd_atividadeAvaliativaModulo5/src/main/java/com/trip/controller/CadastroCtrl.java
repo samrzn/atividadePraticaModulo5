@@ -3,6 +3,7 @@ package com.trip.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -17,7 +18,12 @@ import com.trip.repositories.ClienteRepo;
 public class CadastroCtrl {
 
 	@Autowired
-	private ClienteRepo service;
+	private ClienteRepo service;	
+	
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 
 	@GetMapping
 	public String obterTodos(Model model) {
@@ -34,6 +40,7 @@ public class CadastroCtrl {
 
 	@PostMapping("incluir")
 	public String finalizarInclusao(Model model, @Validated Cliente cliente) {
+		cliente.setSenha(passwordEncoder().encode(cliente.getSenha()));
 		service.save(cliente);
 		return obterTodos(model);
 	}

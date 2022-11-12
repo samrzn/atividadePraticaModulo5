@@ -9,7 +9,7 @@ import com.trip.model.entity.Cliente;
 
 @Repository
 public interface ClienteRepo extends JpaRepository<Cliente, Integer> {
-
+	
 	boolean existsByEmail(String email); 
 	
 	Optional<Cliente> findByEmail(String email);
